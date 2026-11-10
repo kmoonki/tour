@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대한민국 구석구석 관광지 뷰어</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>지역별 관광명소 탐색</h1>
+      <p class="subtitle">선택하신 지역 정보는 자동으로 동기화되어 저장됩니다.</p>
+    </header>
+
+    <section class="control-panel">
+      <label for="areaSelect">지역 선택:</label>
+      <select id="areaSelect">
+        <option value="">-- 지역을 선택하세요 --</option>
+        <option value="1">서울</option>
+        <option value="2">인천</option>
+        <option value="3">대전</option>
+        <option value="4">대구</option>
+        <option value="5">광주</option>
+        <option value="6">부산</option>
+        <option value="7">울산</option>
+        <option value="8">세종특별자치시</option>
+        <option value="31">경기도</option>
+        <option value="32">강원특별자치도</option>
+        <option value="39">제주도</option>
+      </select>
+      <span id="statusMessage" class="status-message"></span>
+    </section>
+
+    <!-- 초기 상태에서는 숨김 처리 -->
+    <main id="tourListSection" class="hidden">
+      <h2 id="currentRegionTitle">관광지 목록</h2>
+      <div id="tourCardGrid" class="card-grid"></div>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
